@@ -3,6 +3,7 @@
   <data>
     <template id="w-test_widget_asset_head" name="w-test assets" inherit_id="web.assets_backend">
       <xpath expr="." position="inside">
+        <link rel="stylesheet" href="/w-test/static/src/css/style.css"/>
         <script type="text/javascript" src="/w-test/static/src/js/C_CopyClipboardText.js"/>
       </xpath>
     </template>

@@ -10,7 +10,17 @@ odoo.define('w-test.C-CopyClipboardText', function (require) {
       'click .o_clipboard_button': '_onBtnClick'
     }),
     _onBtnClick: function (ev) {
-      alert('congrates you just copied: '+ this.value)
+
+       var tag = document.createElement("div");
+       tag.classList.add('copy-text')
+       tag.innerHTML = ('You copied: <br>'+ `<h4>${this.value}</h4>`);
+
+       var element = document.querySelector(".o_clipboard_button")
+       element.appendChild(tag)
+       setTimeout(function(){
+          element.innerHTML = '<span class="fa fa-clipboard"></span><span> Copy Text</span>'
+        }, 2000)
+       
     }
   })
 
